@@ -9,6 +9,8 @@ class AccountController extends Controller
 {
     public function index()
     {
+        Auth::signin();
+        $this->view->render('account' . DIRECTORY_SEPARATOR . 'signin.php', 'template.php');
     }
 
     public function signup()
